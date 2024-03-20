@@ -11,7 +11,7 @@
     width: 35vw;
     height: 90%;
     border-radius: 0.1875rem;
-    border: 5px solid #D1DDEF;
+    border: 5px solid var(--primary-color);
 }
 
 .tryedLetters h2 {

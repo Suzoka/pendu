@@ -8,6 +8,8 @@ body {
   --background-color: #04070F;
   --primary-color : #D1DDEF;
   --secondary-color: #6D7C92;
+  --filter-background: invert(2%) sepia(13%) saturate(7500%) hue-rotate(208deg) brightness(96%) contrast(100%);
+  --filter-primary: invert(88%) sepia(17%) saturate(219%) hue-rotate(179deg) brightness(97%) contrast(93%);
   background-color: var(--background-color);
   color: var(--primary-color);
   height: 100vh;
@@ -20,4 +22,6 @@ body.light {
   --background-color: #F9E4CA;
   --primary-color : #652719;
   --secondary-color: #32120B;
+  --filter-background: invert(87%) sepia(17%) saturate(343%) hue-rotate(347deg) brightness(103%) contrast(95%);;
+  --filter-primary: invert(17%) sepia(42%) saturate(1962%) hue-rotate(340deg) brightness(91%) contrast(92%);
 }
