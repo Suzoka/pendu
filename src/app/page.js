@@ -1,34 +1,29 @@
-'use client'
-import { useEffect, useState } from 'react';
-import { Loader } from '@/components/loader/loader'
-import { Game } from '@/components/game/game'
-import { ErrorMessage } from '@/components/error-message/errorMessage'
+import { Game } from '@/components/game/game';
+export const dynamic = 'force-dynamic';
 
-export default function Home() {
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(false);
-
-  useEffect(() => {
-    fetch('http://localhost:3000', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: new URLSearchParams({
-        locale: 'fr-FR'
-      }).toString()
+const getDatas = async () => {
+  const res = await fetch('http://localhost:3000', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: new URLSearchParams({
+      locale: 'fr-FR'
+    }).toString()
     })
-      .then(response => response.json())
-      .then(json => setData(json))
-      .catch(error => {
-        setError(true);
-      });
-  }, []);
 
-  if (!data && !error) {return <Loader />}
+  if (res.ok) {
+    return res.json()
+  }
+
+  throw new Error('Erreur')
+
+}
+
+export default async function Home() {
+  const data = await getDatas()
+
   return (
-    <>
-      {error == true ? <ErrorMessage /> : < Game word={data.word} />}
-    </>
+    < Game word={data.word} />
   )
 }

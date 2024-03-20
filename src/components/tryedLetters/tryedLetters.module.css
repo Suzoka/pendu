@@ -1,0 +1,33 @@
+.letters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 25px 50px;
+    gap: 50px;
+}
+
+.tryedLetters {
+    width: 35vw;
+    height: 90%;
+    border-radius: 0.1875rem;
+    border: 5px solid #D1DDEF;
+}
+
+.tryedLetters h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.tryedLetters p {
+    text-align: center;
+    font-size: 3rem;
+    margin: 0;
+}
+
+@media screen and (max-width: 1110px) {
+    .tryedLetters {
+        width: 75vw;
+    }
+}
