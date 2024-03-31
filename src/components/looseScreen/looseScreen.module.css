@@ -24,7 +24,7 @@
 .bouton {
     border-radius: 0.3125rem;
     background: var(--secondary-color);
-    color: var(--primary-color);
+    color: var(--background-color);
     border: none;
     padding: 1.5rem 3rem;
     cursor: pointer;
@@ -37,5 +37,4 @@
 
 .bouton:focus {
     background: var(--primary-color);
-    color: var(--secondary-color);
 }

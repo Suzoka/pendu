@@ -1,4 +1,5 @@
 import { Game } from '@/components/game/game';
+import { LightDarkButton } from '@/components/lightDarkButton/lightDarkButton';
 export const dynamic = 'force-dynamic';
 
 const getDatas = async () => {
@@ -10,7 +11,7 @@ const getDatas = async () => {
     body: new URLSearchParams({
       locale: 'fr-FR'
     }).toString()
-    })
+  })
 
   if (res.ok) {
     return res.json()
@@ -24,6 +25,9 @@ export default async function Home() {
   const data = await getDatas()
 
   return (
-    < Game word={data.word} />
+    <>
+      <LightDarkButton />
+      < Game word={data.word} />
+    </>
   )
 }
