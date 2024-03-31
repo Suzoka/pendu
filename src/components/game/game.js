@@ -28,7 +28,7 @@ export const Game = ({ word }) => {
     const [displayedWord, setDisplayedWord] = useState(generateDisplayedWord());
 
     const newTry = (letter) => {
-        if (!tryedLetter.find(tryed => tryed == letter)) {
+        if (!tryedLetter.find(tryed => tryed == letter) && letter.match(/[a-zA-Z]/)) {
             setTryedLetter([...tryedLetter, letter].sort())
         }
     }
@@ -41,7 +41,7 @@ export const Game = ({ word }) => {
 
 
     if (!displayedWord.some(letter => letter.props.children == '_')) {
-        return <WinScreen />
+        return <WinScreen nbErreur={tryedLetter.filter((essaie) => word.indexOf(essaie) == -1).length} word={word}/>
     }
     if (tryedLetter.filter((essaie) => word.indexOf(essaie) == -1).length >= 11) {
         return <LooseScreen word={word} />
