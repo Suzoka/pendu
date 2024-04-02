@@ -16,7 +16,7 @@ export const Answer = ({ newTry }) => {
     return (
         <form onSubmit={sentForm} className={Classes.try} autoComplete="off">
             <label htmlFor="lettre" className={Classes.label}>Essayer une lettre</label>
-            <div>
+            <div className={Classes.answer}>
                 <input type="text" name="lettre" id="lettre" ref={inputRef} maxLength="1" className={Classes.tryElement} autoFocus/>
                 <button type="submit" className={Classes.sendTry}>Envoyer</button>
             </div>

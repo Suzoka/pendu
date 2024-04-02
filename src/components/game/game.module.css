@@ -11,6 +11,8 @@
     margin-top: 0;
     margin-bottom: 2rem;
     letter-spacing: 1.5rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .flex {
@@ -18,10 +20,48 @@
     justify-content: space-evenly;
     align-items: center;
     height: 100%;
+    width: 100%;
 }
 
-@media screen and (max-width: 1110px) {
+@media screen and (max-width: 1130px) {
     .flex {
         flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .title {
+        font-size: 3rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .mot {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 745px) {
+    .title {
+        font-size: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .mot {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 460px) {
+
+    .title {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .mot {
+        font-size: 1rem;
     }
 }

@@ -10,13 +10,6 @@
     margin-bottom: 2rem;
 }
 
-.hangman {
-    margin-right: auto;
-    margin-left: auto;
-    width: fit-content;
-    height: 20rem;
-}
-
 .word {
     font-size: 2rem;
 }
@@ -33,6 +26,7 @@
     margin-left: auto;
     font-size: 1.5rem;
     font-weight: bold;
+    margin-top: 1rem;
 }
 
 .bouton:focus {

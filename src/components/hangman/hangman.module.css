@@ -1,13 +1,30 @@
 .hangman {
-    width: 35vw;
+    width: 35%;
     height: 90%;
     border-radius: 0.1875rem;
     border: 5px solid var(--primary-color);
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .hangman img {
     filter: var(--filter-primary);
+    width: 90%;
+    height: 90%;
+}
+
+@media screen and (max-width: 1130px) {
+    .hangman {
+        width: 25%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 745px) {
+    .hangman {
+        width: 45%;
+    }
 }

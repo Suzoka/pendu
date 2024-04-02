@@ -1,5 +1,4 @@
 import { Game } from '@/components/game/game';
-import { LightDarkButton } from '@/components/lightDarkButton/lightDarkButton';
 export const dynamic = 'force-dynamic';
 
 const getDatas = async () => {
@@ -26,7 +25,6 @@ export default async function Home() {
 
   return (
     <>
-      <LightDarkButton />
       < Game word={data.word} />
     </>
   )

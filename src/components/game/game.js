@@ -6,6 +6,7 @@ import { Hangman } from '@/components/hangman/hangman';
 import { TryedLetters } from '@/components/tryedLetters/tryedLetters';
 import { WinScreen } from '@/components/winScreen/winScreen';
 import { LooseScreen } from '@/components/looseScreen/looseScreen';
+import { LightDarkButton } from '@/components/lightDarkButton/lightDarkButton';
 
 export const Game = ({ word }) => {
 
@@ -41,13 +42,14 @@ export const Game = ({ word }) => {
 
 
     if (!displayedWord.some(letter => letter.props.children == '_')) {
-        return <WinScreen nbErreur={tryedLetter.filter((essaie) => word.indexOf(essaie) == -1).length} word={word}/>
+        return <WinScreen nbErreur={tryedLetter.filter((essaie) => word.indexOf(essaie) == -1).length} word={word} />
     }
     if (tryedLetter.filter((essaie) => word.indexOf(essaie) == -1).length >= 11) {
         return <LooseScreen word={word} />
     }
     return (
         <>
+            <LightDarkButton />
             <h1 className={Classes.title}>Le jeu du pendu</h1>
             <p className={Classes.mot}>{displayedWord}</p>
             <Answer newTry={newTry} />

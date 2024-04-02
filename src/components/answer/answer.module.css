@@ -14,6 +14,7 @@
 .tryElement {
     border-radius: 0.3125rem;
     background: var(--primary-color);
+    color: var(--background-color);
     border: none;
     position: relative;
     z-index: 15;
@@ -50,4 +51,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     filter: var(--filter-background);
+}
+
+.answer {
+    transform: translate(7.5%, 0);
+}
+
+@media screen and (max-width: 460px) {
+    .answer {
+        transform: scale(0.8);
+    }
 }
