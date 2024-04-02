@@ -4,7 +4,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Jeu du prendu",
+  title: "Jeu du pendu",
   description: "Jeu du pendu créé avec Next.js",
 };
 
