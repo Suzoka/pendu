@@ -9,7 +9,6 @@
 
 .tryedLetters {
     width: 35%;
-    /* min-height: 15rem; */
     border-radius: 0.1875rem;
     border: 5px solid var(--primary-color);
 }
