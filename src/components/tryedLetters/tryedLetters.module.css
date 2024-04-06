@@ -29,7 +29,6 @@
 @media screen and (max-width: 1130px) {
     .tryedLetters {
         width: 55%;
-        /* height: 17.5rem; */
     }
 
     .tryedLetters h2 {
@@ -56,9 +55,3 @@
         font-size: 1rem;
     }    
 }
-
-/* @media screen and (max-width: 465px){
-    .tryedLetters {
-        height: 20.5rem;
-    }
-} */
